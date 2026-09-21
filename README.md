@@ -29,8 +29,23 @@
 * **Desarrollo Android:** Desarrollo de librerías en Kotlin para Android.
 * **Desarrollo Backend Java:** Desarrollo de gateway a procesadores de pagos basado en microservicios utilizando Java8, Spring Integration, MongoDb, Docker y RabbitMQ.
 
----
+### **Software Developer / Arquitecto SAP / Consultor Funcional** | `Grupo ASSA`
+*Abril/2008 – Junio/2018 | Buenos Aires, Argentina - Mexico D.F.*
+* **Desarrollo de software backend (Java/C#)**
+* **Desarrollo Mobile (Xamarin)**
+* **Analista funcional SAP Banking**
+* **Arquitecto SAP Netweaver**
 
+### **SAP NetWeaver Consultant** | `ByteTech`
+*Julio/2004 - Marzo/2008 | Buenos Aires, Argentina*
+* **SAP NetWeaver Consultant**: Desarrollo Java. Implementación de productos propietarios de SAP: Portal y Process Integration
+
+### **Software Developer/Electronis Engineer** | `NEC Argentina`
+*Junio/1997 - Junio/2004 | Buenos Aires, Argentina*
+* **Software developer**: Desarrollo en C-C++/Java/Perl/Javascript
+* **Electronics Engineer**: Desarrollo de hardware y firmware de teléfono digital
+
+---
 
 ## 🎓 Educación
 
