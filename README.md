@@ -1,5 +1,5 @@
 # Daniel Sacco
-## Backend Software Engineer (Kotlin | Go | Java) / Electronics Engineer
+## Backend Software Engineer (Kotlin | Go | Java | C/C++) / Electronics Engineer
 
 📧 [daniel.sacco@gmail.com](mailto:daniel.sacco@gmail.com) | 📍 Lago Puelo, Chubut, Argentina  
 🔗 [LinkedIn](https://linkedin.com/danielsacco) | 🐙 [GitHub](https://github.com/danielsacco) | 🌐 [Spotify](https://open.spotify.com/intl-es/artist/5PKz10dhPQfkj0hhHMJSNZ)
