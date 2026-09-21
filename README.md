@@ -6,8 +6,6 @@
 
 ---
 
-## Tabla de contenidos
-
 - [Stack Tecnológico](#️-stack-tecnológico)
 - [Experiencia Profesional](#-experiencia-profesional)
 - [Educación](#-educación)
