@@ -1,17 +1,17 @@
 # Daniel Sacco
 
-## Backend Software Engineer · Kotlin · Go · Java · C/C++
+## Ingeniero de Software Backend · Kotlin · Go · Java · C/C++
 
-**Electronics Engineer** with 20+ years of experience designing, building and operating software and hardware products. Specialized in backend systems, microservices and cloud architectures.
+**Ingeniero Electrónico** con más de 20 años de experiencia diseñando, desarrollando y operando productos de software y hardware. Especializado en sistemas backend, microservicios y arquitecturas cloud.
 
-📍 Lago Puelo, Chubut, Argentina · 🌎 Remote  
+📍 Lago Puelo, Chubut, Argentina · 🌎 Remoto  
 📧 [daniel.sacco@gmail.com](mailto:daniel.sacco@gmail.com) · [LinkedIn](https://linkedin.com/danielsacco) · [GitHub](https://github.com/danielsacco)
 
 ---
 
 ## Perfil
 
-Backend engineer focused on reliable, observable and maintainable services. I work across the full lifecycle: technical design, implementation, automated testing, deployment and production operation. My background combines software engineering, electronics, enterprise integration and payment processing.
+Ingeniero backend enfocado en servicios confiables, observables y mantenibles. Trabajo a lo largo de todo el ciclo de vida: diseño técnico, implementación, pruebas automatizadas, despliegue y operación en producción. [...]
 
 ## Competencias principales
 
