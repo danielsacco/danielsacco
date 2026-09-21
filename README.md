@@ -1,6 +1,6 @@
 # Daniel Sacco
 
-## Ingeniero de Software Backend · Kotlin · Go · Java · C/C++
+## Ingeniero electrónico especializado en Software Backend · Kotlin · Go · Java · C/C++
 
 **Ingeniero Electrónico** con más de 20 años de experiencia diseñando, desarrollando y operando productos de software y hardware.
 Especializado en software de sistemas backend, microservicios y arquitecturas cloud.
@@ -22,7 +22,7 @@ Trabajo a lo largo de todo el ciclo de vida: diseño técnico, implementación, 
 - **Datos e integración:** MySql, DynamoDB, MongoDB, AWS SNS/SQS, RabbitMQ, Spring Integration y gateways de pago.
 - **Observabilidad:** Grafana, Datadog, Sentry y Opsgenie; métricas, tableros y alertas operativas.
 - **Calidad:** JUnit, MockK, Testcontainers, TDD/BDD y Docker.
-- **Experiencia adicional:** desarrollo Android, Xamarin, SAP NetWeaver, hardware y firmware.
+- **Experiencia adicional:** Desarrollo Android, Xamarin, SAP NetWeaver, hardware y firmware.
 
 ## Experiencia profesional
 
