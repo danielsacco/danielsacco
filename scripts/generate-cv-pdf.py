@@ -1,0 +1,153 @@
+#!/usr/bin/env python3
+"""Render the profile README as a styled PDF using a local Chromium browser."""
+
+from __future__ import annotations
+
+import argparse
+import html
+import re
+import shutil
+import subprocess
+import sys
+from pathlib import Path
+
+
+BROWSER_NAMES = (
+    "google-chrome",
+    "google-chrome-stable",
+    "chromium",
+    "chromium-browser",
+    "chrome",
+)
+
+
+CSS = r"""
+@page { size: A4; margin: 14mm 15mm 15mm; }
+:root { --ink: #172033; --muted: #536174; --accent: #1769aa; --line: #dbe5ef; }
+* { box-sizing: border-box; }
+body { color: var(--ink); font-family: "Inter", "Segoe UI", Arial, sans-serif; font-size: 10.2pt; line-height: 1.42; margin: 0; }
+h1 { color: #102a43; font-size: 27pt; letter-spacing: -.04em; line-height: 1.05; margin: 0 0 3px; }
+h2 { border-bottom: 2px solid var(--accent); color: #123b5d; font-size: 14pt; letter-spacing: -.01em; margin: 18px 0 8px; padding-bottom: 3px; }
+h3 { color: #173f63; font-size: 11.2pt; margin: 12px 0 1px; }
+p { margin: 3px 0 7px; }
+header p { color: var(--muted); margin: 2px 0; }
+header { border-bottom: 1px solid var(--line); margin-bottom: 10px; padding-bottom: 9px; }
+a { color: var(--accent); text-decoration: none; }
+hr { border: 0; border-top: 1px solid var(--line); margin: 13px 0; }
+ul { margin: 3px 0 8px; padding-left: 18px; }
+li { margin: 2px 0; }
+code { background: #edf4fa; border-radius: 3px; color: #174a70; font-family: "SFMono-Regular", Consolas, monospace; font-size: .9em; padding: 1px 4px; }
+.section { break-inside: avoid; }
+@media print { a { color: inherit; } h2 { break-after: avoid; } }
+"""
+
+
+def inline_markdown(value: str) -> str:
+    """Convert the small Markdown subset used by the CV into safe HTML."""
+    value = html.escape(value, quote=True)
+    value = re.sub(r"\[([^]]+)\]\(([^)]+)\)", r'<a href="\2">\1</a>', value)
+    value = re.sub(r"`([^`]+)`", r"<code>\1</code>", value)
+    value = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", value)
+    value = re.sub(r"(?<!\*)\*([^*]+)\*(?!\*)", r"<em>\1</em>", value)
+    return value
+
+
+def render(markdown: str) -> str:
+    lines = markdown.splitlines()
+    out: list[str] = ["<!doctype html><html><head><meta charset='utf-8'>", f"<style>{CSS}</style></head><body>"]
+    in_list = False
+    skip_toc = False
+    in_header = True
+
+    def close_list() -> None:
+        nonlocal in_list
+        if in_list:
+            out.append("</ul>")
+            in_list = False
+
+    for raw in lines:
+        line = raw.strip()
+        if not line:
+            close_list()
+            continue
+        if line.startswith("<!--") or line.startswith("**danielsacco/"):
+            skip_toc = True
+            continue
+        if skip_toc:
+            if line.endswith("-->"):
+                skip_toc = False
+            continue
+        if line == "---":
+            close_list()
+            out.append("<hr>")
+            continue
+        heading = re.match(r"^(#{1,6})\s+(.*)$", line)
+        if heading:
+            close_list()
+            level = len(heading.group(1))
+            title = re.sub(r"[*`]", "", heading.group(2)).strip()
+            # The table of contents is useful on GitHub but not in the one-page CV.
+            if title.lower().startswith("tabla de contenidos"):
+                skip_toc = True
+                continue
+            tag = f"h{level}"
+            if level == 1:
+                out.append(f"<header><{tag}>{inline_markdown(title)}</{tag}>")
+            else:
+                if in_header:
+                    out.append("</header>")
+                    in_header = False
+                out.append(f"<{tag}>{inline_markdown(title)}</{tag}>")
+            continue
+        bullet = re.match(r"^[-*]\s+(.*)$", line)
+        if bullet:
+            if not in_list:
+                out.append("<ul>")
+                in_list = True
+            out.append(f"<li>{inline_markdown(bullet.group(1))}</li>")
+            continue
+        close_list()
+        out.append(f"<p>{inline_markdown(line)}</p>")
+
+    close_list()
+    if in_header:
+        out.append("</header>")
+    out.append("</body></html>")
+    return "".join(out)
+
+
+def find_browser() -> str | None:
+    for name in BROWSER_NAMES:
+        path = shutil.which(name)
+        if path:
+            return path
+    return None
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--input", type=Path, default=Path("README.md"), help="Markdown source file")
+    parser.add_argument("--output", type=Path, default=Path("CV-Daniel-Sacco.pdf"), help="PDF destination")
+    args = parser.parse_args()
+
+    browser = find_browser()
+    if not browser:
+        print("No se encontró Chromium/Google Chrome. Instálalo y vuelve a ejecutar el script.", file=sys.stderr)
+        return 1
+
+    html_path = args.output.with_suffix(".html")
+    html_path.write_text(render(args.input.read_text(encoding="utf-8")), encoding="utf-8")
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        subprocess.run(
+            [browser, "--headless", "--disable-gpu", "--no-sandbox", "--print-to-pdf-no-header", f"--print-to-pdf={args.output}", html_path.resolve().as_uri()],
+            check=True,
+        )
+    finally:
+        html_path.unlink(missing_ok=True)
+    print(f"PDF generado: {args.output}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
