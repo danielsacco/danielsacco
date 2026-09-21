@@ -11,7 +11,8 @@
 
 ## Perfil
 
-Ingeniero backend enfocado en servicios confiables, observables y mantenibles. Trabajo a lo largo de todo el ciclo de vida: diseño técnico, implementación, pruebas automatizadas, despliegue y operación en producción. [...]
+Ingeniero backend enfocado en servicios confiables, escalables, observables y mantenibles.
+Trabajo a lo largo de todo el ciclo de vida: diseño técnico, implementación, pruebas automatizadas, despliegue y operación en producción.
 
 ## Competencias principales
 
