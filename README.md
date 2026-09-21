@@ -16,7 +16,7 @@
 ## 🛠️ Stack Tecnológico
 
 * **Lenguajes principales:** `Kotlin`, `Go (Golang)`, `Java` `C/C++`.
-* **Cloud & DevOps (AWS):** `AWS Lambda`, `ECS / EKS`, `S3`, `RDS (MySQL)`, `DynamoDB`, `SQS / SNS`.
+* **Cloud & DevOps (AWS):** `S3`, `RDS (MySQL)`, `DynamoDB`, `SQS / SNS`.
 * **Observabilidad y operación**: `Grafana`, `Datadog`, `Sentry`, `Opsgenie`
 * **Arquitectura & Infraestructura:** `Microservicios`, `REST APIs`, `Event-Driven Architecture (SNS / SQS)`, `Docker`.
 * **Calidad & Pruebas:** `JUnit`, `MockK`, `Testcontainers`, `TDD / BDD`.
