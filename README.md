@@ -2,7 +2,7 @@
 
 ## Backend Software Engineer · Kotlin · Go · Java · C/C++
 
-**Electronics Engineer** with 20+ years of experience designing, building and operating software and hardware products. Specialized in backend systems, microservices, cloud architectures and payment platforms.
+**Electronics Engineer** with 20+ years of experience designing, building and operating software and hardware products. Specialized in backend systems, microservices and cloud architectures.
 
 📍 Lago Puelo, Chubut, Argentina · 🌎 Remote  
 📧 [daniel.sacco@gmail.com](mailto:daniel.sacco@gmail.com) · [LinkedIn](https://linkedin.com/danielsacco) · [GitHub](https://github.com/danielsacco)
@@ -16,8 +16,8 @@ Backend engineer focused on reliable, observable and maintainable services. I wo
 ## Competencias principales
 
 - **Backend:** Kotlin, Go, Java, C/C++; microservicios, REST APIs y sistemas orientados a eventos.
-- **Cloud & plataforma:** AWS Lambda, ECS/EKS, S3, RDS/MySQL, Aurora MySQL, DynamoDB, SNS y SQS.
-- **Datos e integración:** MongoDB, RabbitMQ, Spring Integration y gateways de pago.
+- **Cloud & plataforma:** S3, RDS/MySQL, Aurora MySQL, DynamoDB, SNS y SQS.
+- **Datos e integración:** MySql, DynamoDB, MongoDB, AWS SNS/SQS, RabbitMQ, Spring Integration y gateways de pago.
 - **Observabilidad:** Grafana, Datadog, Sentry y Opsgenie; métricas, tableros y alertas operativas.
 - **Calidad:** JUnit, MockK, Testcontainers, TDD/BDD y Docker.
 - **Experiencia adicional:** desarrollo Android, Xamarin, SAP NetWeaver, hardware y firmware.
@@ -37,8 +37,8 @@ Backend engineer focused on reliable, observable and maintainable services. I wo
 
 **Junio 2018 – Abril 2023 · Buenos Aires, Argentina**
 
+- Diseño y desarrollo de un gateway de pagos basado en microservicios con **Java**, **Spring Integration**, **MongoDB**, **Docker** y **RabbitMQ**.
 - Desarrollo de librerías **Kotlin para Android**.
-- Diseño y desarrollo de un gateway de pagos basado en microservicios con **Java 8**, **Spring Integration**, **MongoDB**, **Docker** y **RabbitMQ**.
 
 ### Software Developer · Arquitecto SAP · Consultor Funcional · Grupo ASSA
 
@@ -52,7 +52,7 @@ Backend engineer focused on reliable, observable and maintainable services. I wo
 
 **Julio 2004 – Marzo 2008 · Buenos Aires, Argentina**
 
-- Desarrollo Java e implementación de productos SAP NetWeaver: **Portal** y **Process Integration**.
+- Desarrollo Java e implementación con productos SAP NetWeaver: **Portal** y **Process Integration**.
 
 ### Software Developer · Electronics Engineer · NEC Argentina
 
@@ -71,7 +71,3 @@ Backend engineer focused on reliable, observable and maintainable services. I wo
 
 - **Español:** nativo.
 - **Inglés:** upper-intermediate.
-
----
-
-*Disponible para oportunidades de backend engineering, arquitectura de software y desarrollo de plataformas.*
