@@ -35,6 +35,7 @@
 ## 🎓 Educación
 
 ### **Ingeniería en Electrónica** | `Universidad Tecnológica Nacional - Regional Buenos Aires`
+*Graduación año 2004*
 
 ---
 
