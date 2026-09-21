@@ -6,6 +6,15 @@
 
 ---
 
+## Tabla de contenidos
+
+- [Stack Tecnológico](#️-stack-tecnológico)
+- [Experiencia Profesional](#-experiencia-profesional)
+- [Educación](#-educación)
+- [Idiomas](#️-idiomas)
+
+---
+
 ## 🛠️ Stack Tecnológico
 
 * **Lenguajes principales:** `Kotlin`, `Go (Golang)`, `Java` `C/C++`.
