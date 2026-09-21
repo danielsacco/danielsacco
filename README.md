@@ -16,7 +16,7 @@ Backend engineer focused on reliable, observable and maintainable services. I wo
 ## Competencias principales
 
 - **Backend:** Kotlin, Go, Java, C/C++; microservicios, REST APIs y sistemas orientados a eventos.
-- **Cloud & plataforma:** S3, RDS/MySQL, Aurora MySQL, DynamoDB, SNS y SQS.
+- **Cloud & plataforma:** S3, RDS/MySQL, DynamoDB, SNS y SQS.
 - **Datos e integración:** MySql, DynamoDB, MongoDB, AWS SNS/SQS, RabbitMQ, Spring Integration y gateways de pago.
 - **Observabilidad:** Grafana, Datadog, Sentry y Opsgenie; métricas, tableros y alertas operativas.
 - **Calidad:** JUnit, MockK, Testcontainers, TDD/BDD y Docker.
